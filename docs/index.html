@@ -2,14 +2,9 @@
 
 <p>This is a website used for clickjacking</p>
 
-<button id="malicious_button">Click This</button>
+<button onclick="malicious_function();">Click This</button>
 
 <script>
-    $(document).ready(function() {
-        $('#malicious_button').click(function {
-            malicious_function();
-        });
-    });
     function malicious_function() {
       alert(1);
     }
